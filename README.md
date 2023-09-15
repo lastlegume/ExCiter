@@ -1,7 +1,5 @@
-# Scilympiad To LaTeX
+# ExCiter
 
-<div style="text-align: right"> <a class = "extension-link" title = "Get the extension" href = "https://chrome.google.com/webstore/detail/scilympiadtolatex/ompkjeefecnmejcmanlofimmclifefde"><img src = "/assets/images/available-in-chrome.png"></a>     <a class = "extension-link" title = "Get the extension" href = "https://addons.mozilla.org/en-US/firefox/addon/scilympiadtolatex/"><img src = "/assets/images/get-the-addon.webp"></a> </div>
+<div style="text-align: right"> <a class = "extension-link" title = "Get the extension" href = "https://addons.mozilla.org/en-US/firefox/addon/exciter/"><img src = "/assets/images/get-the-addon.webp"></a> </div>
 
-An extension that (mostly) converts a [scilympiad](https://scilympiad.com/) test into LaTeX formatted text. Contains options to customize environments for different questions types and generate a simple preamble and gradetable.  
-This extension isn't perfect and will need modifications such as pagebreaks to be added to the files it generates. It also cannot convert math and will delete all math equations from the test. However, it works with most questions and should be used only as a tool to speed up conversion.
-
+An extension that removes the citations from [Wikipedia](https://www.wikipedia.org/) and the [USDA FEIS database](https://www.feis-crs.org/feis/) to clean up reading. Also has additional options for cleaning that may not work on many sites such as removing APA citations.
