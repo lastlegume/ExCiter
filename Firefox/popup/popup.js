@@ -33,13 +33,13 @@ function remove(e) {
 
 function removeSomeBrackets() {
     browser.tabs.executeScript({
-        //     'code': 'document.body.innerHTML = document.body.innerHTML.replace(/\[[\d\s,]*?\]/g, "");'
+        //     'code': 'document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<a [^>]*?>\s?\[[\w\s,]*?\]\s?<\/a[^>]*?>/g, "");document.body.innerHTML = document.body.innerHTML.replaceAll(/\[[\s]*?<a [^>]*?>\s?[\w\s,]*?\s?<\/a[^>]*?>[\s]*?\]/g, "");'
         'file': "/popup/removenumbrackets.js"
     });
 }
 function removeAllBrackets() {
     browser.tabs.executeScript({
-        //   'code': 'document.body.innerHTML = document.body.innerHTML.replaceAll(/\[.*?\]/g, "");'
+         //  'code': 'var regex = /\s?\[.*?\]/g;console.log(document.body.innerHTML);document.body.innerHTML = document.body.innerHTML.replaceAll(regex, "");'
         'file': "/popup/removeAllBrackets.js"
     });
 }

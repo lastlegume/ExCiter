@@ -1,20 +1,22 @@
 {
   "manifest_version": 2,
   "name": "ExCiter",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Extracts citations by deleting unwanted bracketed citations and parentheses",
   "icons": {
     "30": "icons/nocitation.png"
   },
   "content_scripts": [
     {
-      "matches": ["*://*.wikipedia.org/*", "*://www.fs.usda.gov/database/feis/*"],
+      "matches": ["<all_urls>"],
       "js": ["remove.js"]
     }
   ],
   "permissions": [
     "storage",
-    "activeTab"
+    "activeTab",
+    "scripting",
+    "tabs"
   ],
   "options_ui": {
     "page": "options.html",

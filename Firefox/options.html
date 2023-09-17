@@ -8,21 +8,30 @@
 </head>
 
 <body>
-    <h1>Automatic Removal:</h1>
-    <form>
-        <div class="slidecontainer">
-            <label><input type="checkbox"id="toggle" value = true> Enable</label>
-            <br><label><input type="checkbox"id="numBrackets" value = true> Remove numbers surrounded by brackets (ex. [1, 2] or [1])</label>
+    <h1>Whitelisted Sites:</h1>
+
+    <form id = "addition">
+        Enter only the hostname of the sites. This appears after the :// and before the first / (ex. en.wikipedia.org)
+        <input id = "url" type="text" placeholder = "Enter the hostname"> <select style = "float: right;" id="options" multiple>
+            <!-- <option value="" disabled hidden selected>--Please choose an option--</option> -->
+            <option value=1> Remove bracket citations </option>
+            <option value=2> Remove APA citations </option>
+          </select>
+          <br><button type="submit">Add</button>
+
+            <!-- <label><input type="checkbox"id="toggle" value = true> Enable</label> -->
+            <!-- <br><label><input type="checkbox"id="numBrackets" value = true> Remove numbers surrounded by brackets (ex. [1, 2] or [1])</label>
             <br><label><input type="checkbox"id="apa" value = false> Remove all APA 7 citations (ex. (Smith, 2021))</label>
             <br><label><input type="checkbox"id="mla" value = false> Remove all MLA 9 citations (ex. (Smith 1))</label>
             <br><label><input type="checkbox"id="strict" value = false> Delete all characters surrounded by brackets (ex. [citation needed])</label>
             <br><label><input type="checkbox"id="numParentheses" value = false> Delete parentheses with exclusively numbers (ex. (1))   </label>
             <br><label><input type="checkbox"id="allParentheses" value = false> Delete all characters within parentheses (not recommended) (ex. (a))   </label>
-            <br><button type="submit">Save</button>
-        </div>
-    </form>
-    <button id="resetDefaults">Restore to defaults</button>
-
+            <br><button type="submit">Save</button> -->
+    </form><br>
+    <h2>List of whitelisted sites</h2>
+    Delete the line from the textbox to remove the whitelisting. 
+    <textarea id = "sites" rows = "10" cols="30"></textarea>
+    <br><button id = "update">Update</button>
     <script src="options.js" defer></script>
 </body>
 
