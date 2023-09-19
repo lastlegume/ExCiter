@@ -35,10 +35,11 @@ function removeMLA() {
 
 
 async function run() {
-    var valids = await browser.storage.local.get("urls");
+    var valids = await chrome.storage.local.get('urls');
+    console.log(valids);
     if (Object.keys(valids).length == 0) {
-        browser.storage.local.set({ "urls": [{ "en.wikipedia.org": [1] }, { "www.fs.usda.gov": [1] }] });
-        valids = await browser.storage.local.get("urls").urls;
+        chrome.storage.local.set({ "urls": [{ "en.wikipedia.org": [1] }, { "www.fs.usda.gov": [1] }] });
+        valids = await chrome.storage.local.get("urls").urls;
     }
     valids = valids.urls;
     var url = window.location.href;

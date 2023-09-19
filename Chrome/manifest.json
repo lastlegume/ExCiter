@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "ExCiter",
   "version": "3.0.0",
   "description": "Extracts citations by deleting unwanted bracketed citations and parentheses",
@@ -15,14 +15,13 @@
   "permissions": [
     "storage",
     "activeTab",
-    "scripting",
-    "tabs"
-  ],
+    "scripting"
+    ],
   "options_ui": {
     "page": "options.html",
     "browser_style": true
   },
-  "browser_action": {
+  "action": {
     "default_icon": "icons/nocitation.png",
     "default_title": "Citation Remover",
     "default_popup": "popup/popup.html"

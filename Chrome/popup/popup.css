@@ -1,0 +1,8 @@
+button{
+    background-color: aquamarine;
+}
+html {
+    min-height: 5em;
+    min-width: 25em;
+    line-height: 1.5;
+  }
