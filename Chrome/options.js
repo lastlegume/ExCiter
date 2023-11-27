@@ -38,7 +38,7 @@ async function restoreOptions() {
   else
     list = list.urls;
   console.log(list);
-  
+
   for (let i = 0; i < list.length; i++) {
     var str = "";
     var values = Object.values(list[i])[0];
@@ -47,6 +47,8 @@ async function restoreOptions() {
         str += "brackets ";
       else if (values[j] == 2)
         str += "APA ";
+      else if (values[j] == 3)
+        str += "parentheses ";
     }
     sites.value = sites.value + Object.keys(list[i])[0] + ": " + str + "\n";
   }
