@@ -2,11 +2,10 @@ run();
 
 function removeSomeBrackets() {
     document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\d\s,]*?\]/g, "");
-    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<a [^>]*?>\s?\[[\w\s,]*?\]\s?<\/a[^>]*?>/g, "");
-    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\s]*?<a [^>]*?>\s?[\w\s,]*?\s?<\/a[^>]*?>[\s]*?\]\s?/g, "");
-    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\s]*?<a [^\]]*?>[\s]*?\]\s?/g, "");
-    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<span.*?>citation needed<\/span>\s?/g, "");
-    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<span class="mw-editsection">.*?>edit<.*?\]<\/span><\/span>\s?/g, "");
+    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<a [^>]*?>\s?\[[\d\s,]*?\]\s?<\/a[^>]*?>/g, "");
+    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\s]*?<a [^>]*?>\s?[\d\s,]*?\s?<\/a[^>]*?>[\s]*?\]/g, "");
+    document.body.innerHTML = document.body.innerHTML.replaceAll(/>citation needed</g, "><");
+    document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<span class="mw-editsection">.*?>edit<.*?\]<\/span><\/span>/g, "");
 
 }
 function removeAllBrackets() {
