@@ -1,12 +1,19 @@
 run();
 
 function removeSomeBrackets() {
+    // old code
     document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\d\s,]*?\]/g, "");
     document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<a [^>]*?>\s?\[[\d\s,]*?\]\s?<\/a[^>]*?>/g, "");
     document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?\[[\s]*?<a [^>]*?>\s?[\d\s,]*?\s?<\/a[^>]*?>[\s]*?\]/g, "");
     document.body.innerHTML = document.body.innerHTML.replaceAll(/>citation needed</g, "><");
     document.body.innerHTML = document.body.innerHTML.replaceAll(/\s?<span class="mw-editsection">.*?>edit<.*?\]<\/span><\/span>/g, "");
 
+    //updated
+    let brackets = document.getElementsByClassName('cite-bracket');
+    console.log(brackets);
+    while(brackets.length>0){
+        brackets[0].parentNode.remove();
+    }
 }
 function removeAllBrackets() {
     var regex = /\s?\[.*?\]/g;
